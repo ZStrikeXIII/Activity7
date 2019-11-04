@@ -1,6 +1,6 @@
 package bikeproject;
 
-public class Bike implements BikeParts{
+public /*abstract*/ class Bike implements BikeParts {
 
   private String handleBars, frame, tyres, seatType;
   private int NumGears;
@@ -9,29 +9,41 @@ public class Bike implements BikeParts{
   public final String MAKE = "Oracle Bikes";
 
   //required methods after implementation
-  public String getHandleBars(){
+  public String getHandleBars() {
     return handleBars;
-  };
+  }
 
-  public void setHandleBars(String newValue){
+  ;
+
+  public void setHandleBars(String newValue) {
     this.handleBars = newValue;
-  };
+  }
 
-  public String getTyres(){
+  ;
+
+  public String getTyres() {
     return tyres;
-  };
+  }
 
-  public void setTyres(String newValue){
+  ;
+
+  public void setTyres(String newValue) {
     this.tyres = newValue;
-  };
+  }
 
-  public String getSeatType(){
+  ;
+
+  public String getSeatType() {
     return seatType;
-  };
+  }
 
-  public void setSeatType(String newValue){
+  ;
+
+  public void setSeatType(String newValue) {
     this.seatType = newValue;
-  };
+  }
+
+  ;
 
   public Bike() {
     this.make = "Oracle Cycles";
@@ -46,11 +58,15 @@ public class Bike implements BikeParts{
     this.make = "Oracle Cycles";
   }//end constructor
 
-  protected void printDescription() {
-    System.out.println("\n" + this.make + "\n"
+  public String bikeString() {
+    return "I'm a Bicycle!";
+  }
+
+  public String toString() {
+    return "\n" + this.make + "\n"
         + "This bike has " + this.handleBars + " handlebars on a "
         + this.frame + " frame with " + this.NumGears + " gears."
-        + "\nIt has a " + this.seatType + " seat with " + this.tyres + " tyres.");
+        + "\nIt has a " + this.seatType + " seat with " + this.tyres + " tyres.";
   }//end method printDescription
 
 }//end class Bike
