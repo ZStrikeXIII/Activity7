@@ -17,6 +17,7 @@ public class BikeList {
     //displayStock(bikes);
     //System.out.println(bikes.get(0));
     System.out.println(calculateStock(bikes));
+    displayBikeNumbers(bikes);
   }
 
   public static void fillArray(ArrayList<Bike> bikes) {
@@ -50,5 +51,14 @@ public class BikeList {
       }
     }
     return bikesSold;
+  }
+
+  public static int displayBikeNumbers(ArrayList<Bike> bikes){
+    int mb = calculateStock(bikes);
+    int rb = bikes.size() - mb;
+    System.out.println("Stock Levels");
+    System.out.println("We have " + mb + " Mountain Bikes in stock");
+    System.out.println("We have " + rb + " Road Bikes in stock");
+    return 0;
   }
 }
